@@ -17,23 +17,29 @@ export default function HomePage() {
     <div className="min-h-screen flex flex-col items-center justify-center p-8 bg-gray-100 dark:bg-gray-900">
       <div className="max-w-3xl text-center space-y-8">
         <h1 className="text-5xl font-bold text-gray-900 dark:text-gray-100">
-          Welcome to Our Store
+          Hurtownia dla warsztatów samochodowych
         </h1>
         
         <p className="text-xl text-gray-600 dark:text-gray-300">
-          Discover amazing products and great deals. Join our community of satisfied customers today!
+          Zaloguj się aby przejść do sklepu
         </p>
 
         <div className="space-y-4">
           <button
-            onClick={() => router.push('/login')}
+            onClick={() => router.push('/signin')}
             className="px-8 py-3 bg-blue-500 text-white rounded-lg text-lg font-semibold hover:bg-blue-600 transition-colors"
           >
-            Get Started
+            Logowanie
           </button>
           
           <p className="text-sm text-gray-500 dark:text-gray-400">
-            Already have an account? Click above to sign in.
+            Nie masz konta?{" "}
+            <span
+              onClick={() => router.push('/signup')}
+              className="text-blue-500 hover:text-blue-600 cursor-pointer"
+            >
+              Zarejestruj się
+            </span>
           </p>
         </div>
       </div>

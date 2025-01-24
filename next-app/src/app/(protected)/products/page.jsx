@@ -11,7 +11,7 @@ export default function ProductsPage() {
   const handleLogout = async () => {
     try {
       await signOut(auth);
-      router.push('/login');
+      router.push('/signin');
     } catch (error) {
       console.error('Failed to logout:', error);
     }

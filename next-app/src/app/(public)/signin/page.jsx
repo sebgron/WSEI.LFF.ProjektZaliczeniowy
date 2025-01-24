@@ -31,7 +31,7 @@ export default function LoginPage() {
   return (
     <div className="min-h-screen flex flex-col items-center justify-center p-8 bg-gray-900">
       <div className="w-full max-w-md bg-gray-800 p-8 rounded-lg shadow-lg">
-        <h1 className="text-2xl font-bold mb-6 text-center text-white">Login</h1>
+        <h1 className="text-2xl font-bold mb-6 text-center text-white">Logowanie</h1>
         {error && (
           <p className="text-red-400 text-sm mb-4">{error}</p>
         )}
@@ -47,7 +47,7 @@ export default function LoginPage() {
             />
           </div>
           <div>
-            <label className="block text-sm font-medium mb-1 text-gray-300">Password</label>
+            <label className="block text-sm font-medium mb-1 text-gray-300">Hasło</label>
             <input
               type="password"
               value={password}
@@ -60,8 +60,18 @@ export default function LoginPage() {
             type="submit"
             className="w-full bg-blue-600 text-white rounded-lg py-2 hover:bg-blue-700 transition-colors"
           >
-            Login
+            Zaloguj się
           </button>
+          
+          <p className="text-sm text-gray-500 dark:text-gray-400">
+            Nie masz konta?{" "}
+            <span
+              onClick={() => router.push('/signup')}
+              className="text-blue-500 hover:text-blue-600 cursor-pointer"
+            >
+              Zarejestruj się
+            </span>
+          </p>
         </form>
       </div>
     </div>
